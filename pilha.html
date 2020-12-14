@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+    <title>ESTRUTURA - PILHA</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style="background-color: #58e95d2b;">
+    <header>
+        <div id='cssmenu'>
+            <ul>
+                <li><a href="fila.html">FILA</a></li>
+                <li class='active'><a href="pilha.html">PILHA</a></li>
+
+                <li><a href="lista.html">LISTA</a></li>
+                <li><a href="arvore.html">ÁRVORES RUBRO-NEGRAS</a></li>
+
+            </ul>
+        </div>
+
+    </header>
+    <div id="enuciado">
+        <h4><b>INSTITUTO FEDERAL DA BAHIA / CAMPUS VITÓRIA DA CONQUISTA</h4>
+        <h4><b>CURSO: BACHAREL EM SISTEMAS DE INFORMAÇÃO - SEMESTRE: 2020.1</h4>
+        <h4><b>PROFESSOR: CLAUDIO RODOLFO SOUSA DE OLIVEIRA</h4>
+        <h3>*Fazer um estudo e implementação de pelo menos 3
+            estruturas de dados utilizadas nativamente por linguagens de programação. </h3>
+    </div>
+
+    <h1 id="cabecalho-trabalho">ESTRUTURA DE DADOS - PILHA</h1>
+
+    <div id="discentes">
+        <div id="aluno">
+            <div id="foto">
+                <img src="img/foto.jpg" alt="IAGO" width="200px" height="200px">
+            </div>
+            <h5>Iago da Silva Oliveira</h5>
+            <h5>MATRÍCULA Nº: 2019119009</h5>
+        </div>
+
+        <div id="aluno">
+            <div id="foto">
+                <img src="img/foto.jpg" alt="IAGO" width="200px" height="200px">
+            </div>
+            <h5>Yullo Costa Bomfim</h5>
+            <h5>MATRÍCULA Nº: 201919028</h5>
+        </div>
+
+        <div id="aluno">
+            <div id="foto">
+                <img src="img/foto.jpg" alt="IAGO" width="200px" height="200px">
+            </div>
+            <h5>Demetrius Araujo Dias Segundo</h5>
+            <h5>MATRÍCULA Nº: 2019119039</h5>
+        </div>
+
+        <div id="aluno">
+            <div id="foto">
+                <img src="img/foto.jpg" alt="IAGO" width="200px" height="200px">
+            </div>
+            <h5>João Victor Lima Ferreira</h5>
+            <h5>MATRÍCULA Nº: 2019119012</h5>
+        </div>
+
+        <div id="aluno">
+            <div id="foto">
+                <img src="img/foto.jpg" alt="IAGO" width="200px" height="200px">
+            </div>
+            <h5>Felipe Ferreira Rocha</h5>
+            <h5>MATRÍCULA Nº: 2019119035</h5>
+        </div>
+
+        <div id="aluno">
+            <div id="foto">
+                <img src="img/foto.jpg" alt="IAGO" width="200px" height="200px">
+            </div>
+            <h5>Higor Lemos do Prado</h5>
+            <h5>MATRÍCULA Nº: 2019119038</h5>
+        </div>
+
+        <div id="aluno">
+            <div id="foto">
+                <img src="img/foto.jpg" alt="IAGO" width="200px" height="200px">
+            </div>
+            <h5>João Pedro Amorim Fortunato da Luz</h5>
+            <h5>MATRÍCULA Nº: 2018119034</h5>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="fila">
+            <h1>ESTRUTURA - PILHA</h1>
+        </div>
+        <input type="text" id="name" placeholder="ENTRE COM UM DADO PARA A PILHA" autocomplete="off">
+
+        <button id="send" class="success" style="margin-bottom: 15px;">INSERIR NA PILHA</button>
+        <button id="remover" name="remover" onclick="Mudarestado('esconder')" class="danger">EXCLUIR ITEM DA
+            PILHA</button>
+
+        <div class="houses" id="esconder">
+            <div id="text">
+            </div>
+        </div>
+    </div>
+
+    <div id="codigo">
+        <div id="codigoItem">
+            <code>
+                <p class="introducao">CÓDIGO DA ESTRUTURA DE DADOS - PILHA</p>
+<p class="comentario">//EXECUTE O ARQUIVO </p>
+<p class="comentario">//COPIE O CÓDIGO EM UM ARQUIVO JS </p>
+<p class="comentario">//ABRA O TERMINAL E COLOQUE node *nomedoarquivojscriado* </p>
+<br>
+<p class="codigoPro">const pilha = () => { </p>
+<p class="codigoPro">const data = [] </p>
+<p class="codigoPro">const add = (value) => { </p>
+<p class="codigoPro">data.push(value) </p>
+<p class="codigoPro"> } </p>
+<p class="codigoPro">const remove = () => { </p>
+<p class="comentario"> //se não houver dados na pilha o método retorna -1 </p>
+<p class="codigoPro">if(data.length===0) { </p>
+<p class="codigoPro">return -1 </p>
+<p class="codigoPro">} </p>
+<p class="codigoPro">const value = data[data.length-1] </p>
+<p class="comentario">// removendo o último ítem de data</p>
+<p class="codigoPro">data.splice(data.length-1, 1)  </p>
+
+<p class="codigoPro">} </p>
+<p class="codigoPro">const print = () => { </p>
+<p class="codigoPro">console.log(data) // imprimi o array data </p>
+<p class="codigoPro">} </p>
+<p class="codigoPro">return { </p>
+<p class="codigoPro">add, remove, print </p>
+<p class="codigoPro">} </p>
+<p class="codigoPro">} </p>
+<p class="comentario"> //criando a pilha </p>
+<p class="codigoPro">const Pilha = pilha()
+<p class="codigoPro">Pilha.add(10) </p>
+<p class="codigoPro">Pilha.add(20) </p>
+<p class="codigoPro">Pilha.add(30) </p>
+<p class="codigoPro">Pilha.add(40) </p>
+
+<p class="codigoPro">Pilha.print()  </p>
+
+<p class="codigoPro">Pilha.remove()  </p>
+
+<p class="codigoPro">Pilha.print()  </p>
+
+<p class="codigoPro">Pilha.remove()  </p>
+
+<p class="codigoPro">Pilha.print() </p>
+
+<p class="codigoPro">Pilha.remove()  </p>
+
+<p class="codigoPro">Pilha.print()  </p>
+
+<p class="codigoPro">Pilha.remove()  </p>
+
+<p class="codigoPro">Pilha.print() </p>
+
+<p class="codigoPro">Pilha.remove()  </p>
+            </code>
+        </div>
+    </div>
+    <div id="slide">
+        <div id="conteudo">
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="img/pilha4.png" style="width: 100%;">
+                    <div class="text">Exemplo de pilha - 1</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/pilha5.png" style="width: 100%;">
+                    <div class="text">Exemplo de pilha - 2</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="img/pilha2.png" style="width: 100%;">
+                    <div class="text">Exemplo de pilha - 3</div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="img/pilha3.png" style="width: 100%;">
+                    <div class="text">Exemplo de pilha - 4</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/header.js"></script>
+<script src="js/pilha.js"></script>
+<script src="js/slideshow.js"></script>
+
+
+</html>
